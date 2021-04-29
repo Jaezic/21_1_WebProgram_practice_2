@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>29, April</title>
+    </head>
+    <body>
+        <script>
+            var A = [1,2,3,5,8,13,21,34,55,89];
+            var i=0 , j=0;
+            for(i in A){
+                if(i == 5)  break;
+                document.write(A[i] + " ");
+            }
+            document.write("<br><br> You have exited the loop.<br><br>");
+            for(j in A){
+                if(j == 2 || j == 3 || j == 5)  continue;
+                document.write(A[j] + " ");
+            }
+            document.write("<br><br> You have exited the loop.");
+        </script>
+    </body>
+</html>
