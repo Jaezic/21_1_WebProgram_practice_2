@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>4, May</title>
+        <script>
+            function checknumber(input){
+                return !isNaN(input);
+            }
+            
+            function addstring(input1, input2){
+                return String(Number(input1) + Number(input2));
+            }
+        </script>
+    </head>
+    <body>
+        <script>
+            var input1 = prompt("Please type anything : ");
+            alert("Result : " + checknumber(input1));
+
+            var input2, input3;
+            input2 = prompt("Please type anything : ");
+            input3 = prompt("Please type anything : ");
+            alert("Result : " + addstring(input2, input3));
+        </script>
+    </body>
+</html>
