@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>13, May</title>
+    </head>
+    <body>
+        <script>
+            var date = new Date;
+            document.write(date.getDate().toString() + "Days ");
+            document.write(date.getHours().toString() + ":" + date.getMinutes().toString() + ":"+ date.getSeconds().toString() + "<br/>");
+            date.setDate(date.getDate()+5);
+            date.setHours(date.getHours()+3);
+            date.setMinutes(date.getMinutes()+25);
+            document.write(date.getDate().toString() + "Days ");
+            document.write(date.getHours().toString() + ":" + date.getMinutes().toString() + ":"+ date.getSeconds().toString() + "<br/>");
+            date.setHours(date.getHours()+26);
+            date.setMinutes(date.getMinutes()+78);
+            document.write(date.getDate().toString() + "Days ");
+            document.write(date.getHours().toString() + ":" + date.getMinutes().toString() + ":"+ date.getSeconds().toString() + "<br/>");
+            if(date.getDay() == 0)  document.write("Monday");
+            else if(date.getDay() == 1) document.write("Tuesday");
+            else if(date.getDay() == 2) document.write("Wednesday");
+            else if(date.getDay() == 3) document.write("Thursday");
+            else if(date.getDay() == 4) document.write("Friday");
+            else if(date.getDay() == 5) document.write("Saturday");
+            else if(date.getDay() == 6) document.write("Sunday");
+            document.write("<br/>");
+            document.write(Math.max(Math.E,Math.LN2,Math.LN10,Math.LOG2E,Math.LOG10E,Math.PI,Math.SQRT1_2,Math.SQRT2).toString() + "<br/>");
+            document.write(Math.min(Math.E,Math.LN2,Math.LN10,Math.LOG2E,Math.LOG10E,Math.PI,Math.SQRT1_2,Math.SQRT2).toString() + "<br/>");
+            document.write(+Math.round(Math.PI).toString() + " "+rMath.round(Math.LOG10E).toString());
+        </script>
+    </body>
+</html>

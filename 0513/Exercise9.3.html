@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>13, May</title>
+    </head>
+    <body>
+        <script>
+            var tapstorage = new Array();
+            var tapcount = 0;
+            function win_open(){
+                tapstorage[tapcount] = window.open("http://www.naver.com");
+                tapcount++;
+                document.getElementById("count").innerHTML = tapcount;
+
+            }
+            function win_close(){
+                if (tapcount != 0){
+                    tapcount--;
+                    tapstorage[tapcount].close(tapstorage[tapcount]);
+                    document.getElementById("count").innerHTML = tapcount;
+                }
+            }
+        </script>
+        <h1 id = "count">0</h1>
+        <input type = "button" value = "Open Window" onclick="win_open()">
+        <input type = "button" value = "Close Window" onclick="win_close()">
+    </body>
+</html>
