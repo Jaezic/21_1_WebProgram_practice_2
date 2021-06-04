@@ -1,0 +1,25 @@
+<html>
+    <header>
+        <title>25, May</title>
+    </header>
+    <body>
+        <h2 id ="heading">JS EX</h2>
+        <h3 id ="ex1">EX 1</h3><a id="a1" name="EX1"/>
+        <p>Change the following image to a grape whose width is 300.</p>
+        <img id="img1" src="apple.png" width="200">
+        <script>
+            document.getElementById("heading").innerHTML="JavaScript Exercise 10.1";
+            document.getElementById("ex1").innerHTML="Exercise 1";
+            document.getElementById("img1").src="grape.jpg";
+            document.getElementById("img1").width="300";
+        </script>
+        <h3 id="ex2">Exercise 2</h3>
+        <p>Go to <a href="#EX1">Exercise 1</a>.<br/>
+        The name of anchor "a1" is: <span id="sp1"></span></p>
+        <script>
+            document.getElementById("sp1").innerHTML = document.getElementById("a1").name;
+            document.getElementById("ex2").style.color = "red";
+            document.getElementById("ex2").style.fontStyle = "italic";
+        </script>
+    </body>
+</html>

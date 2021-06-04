@@ -1,0 +1,38 @@
+<html>
+    <header>
+        <title>1, June</title>
+        <script type="text/JavaScript" src="validate.js"></script>
+    </header>
+    <body>
+        <form name = "form1" action ="submit.php" onsubmit="return validate(this)">
+        <h1>Create Account</h1>
+        <span style = "display : inline-block; width: 100px;"><b>Your name:</b></span>
+        <input type = "text" name = "username">
+        <br/>
+        <span style = "display : inline-block; width: 100px;"><b>Email: </b></span>
+        <input type = "text" name = "email">
+        <br/>
+        <span style = "display : inline-block; width: 100px;"><b>Email again: </b></span>
+        <input type = "text" name = "emailagain">
+        <br/>
+        <span style = "display : inline-block; width: 100px;"><b>Mobile phone: </b></span>
+        <input type = "text" name = "phone">
+        <p id= "log" style ="color :red"></p>
+        <input type = "submit" value = "Create">
+        </form>
+        <script>
+            function validate(form){
+                if(!validateEmail(form.email.value)){
+                    document.getElementById("log").innerHTML = "Enter correct e-mail address.";
+                }
+                else if(form.email.value != form.emailagain.value){
+                    document.getElementById("log").innerHTML = "Enter correct e-mai3l address and e-mail again."
+                }
+                else if(!validatePhone(form.phone.value)){
+                    document.getElementById("log").innerHTML = "Enter correct phone number.";
+                }
+                else document.getElementById("log").innerHTML = "";
+            }
+        </script>
+    </body>
+</html>
