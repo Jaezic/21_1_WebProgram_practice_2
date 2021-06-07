@@ -1,7 +1,7 @@
 <html>
-    <header>
+    <head>
         <title>1, June</title>
-    </header>
+    </head>
     <body>
         <h3>Exercise 10.3.1</h3>
         <a href="http://google.com" name="google">Google</a><br/>
@@ -14,16 +14,13 @@
             document.write("The third anchor : " + "<br/>" + document.links[2].innerHTML);
         </script>
         <br/>
-        <h3>Exercise 10.3.2</h3>
-        <span>Counter : </span>
-        <input type="text" id="input1" value="0">
-        <br/>
-        <input type="button" onclick = "startpressed();" value="Start">
-        <input type="button" onclick = "stoppressed();" value="Stop">
         <script>
             var check = false;
             var input = 0;
             var handle;
+            function countup(){
+                document.getElementById("input1").value = ++input;
+            }
             function startpressed(){
                 if(!check){
                     check = true;
@@ -32,41 +29,43 @@
                     handle = setInterval('countup()',500);
                 }
             }
-            function countup(){
-                document.getElementById("input1").value = ++input;
-            }
             function stoppressed(){
                 if(check){
                     check = false;
                     clearInterval(handle);
                 }
             }
+
+            var time = 0;
+            var handle2;
+            var check2 = false;
+            function repeatup(){
+                document.getElementById('input2').value = ++time + " seconds";
+                if(time == 5){
+                    check2 = false;
+                    clearInterval(handle2);
+                }
+            }
+            function starttimer(){
+                if(!check){
+                    check2 = true;
+                    time = 0;
+                    document.getElementById('input2').value = time + " seconds";
+                    handle = setInterval('repeatup()', 1000);
+                }
+            }
         </script>
+        <h3>Exercise 10.3.2</h3>
+        <span>Counter : </span>
+        <input type="text" id="input1" value="0">
+        <br/>
+        <input type="button" onclick = "startpressed();" value="Start">
+        <input type="button" onclick = "stoppressed();" value="Stop">
         <h3>Exercise 10.3.3</h3>
         <span>Timer : </span>
         <input type="text" id="input2" value= "0 seconds">
         <br/>
         <input type="button" onclick ="starttimer();" value="Start Timer">
 
-        <script>
-            var time = 0;
-            var handle;
-            var check = false;
-            function starttimer(){
-                if(!check){
-                    check = true;
-                    time = 0;
-                    document.getElementById('input2').value = time + " seconds";
-                    handle = setInterval('repeatup()', 1000);
-                }
-            }
-            function repeatup(){
-                document.getElementById('input2').value = ++time + " seconds";
-                if(time == 5){
-                    check = false;
-                    clearInterval(handle);
-                }
-            }
-        </script>
     </body>
 </html>
